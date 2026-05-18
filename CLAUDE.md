@@ -83,6 +83,27 @@ proceed without it.
 
 ## Agent Behavior
 
+### Self-review loop (mandatory)
+
+Before considering any instruction complete, the agent **must** run a 
+self-review pass over everything it produced. The pass must check for:
+
+- **Errors** — logic errors, wrong paths, broken imports, incorrect commands
+- **Gaps** — missing steps, incomplete implementations, untested edge cases
+- **Findings** — unexpected discoveries that could affect the result
+- **Vulnerabilities** — security issues introduced or exposed by the change
+- **Humo negro** — warning signs of hidden problems: silent failures, 
+  swallowed exceptions, ambiguous outputs, assumptions that could break 
+  silently in production
+
+If **any** of the above are found, the agent must fix them and run the 
+review pass again from scratch. This loop repeats until the pass finds 
+**zero** issues. There is no limit on the number of passes — if it takes 
+10 passes, run 10 passes. The instruction is not complete until a full 
+clean pass is achieved.
+
+The agent must state how many passes were needed in the final report.
+
 ### Final report
 
 At the end of every task or instruction, the agent **must** produce a final 
@@ -90,6 +111,7 @@ report summarizing:
 
 - What was done (actions taken, files modified, commands run)
 - What was found (relevant discoveries or diagnostics)
+- How many self-review passes were required
 - What is pending (next steps or blockers, if any)
 
 The report must be concise, written in plain language, and delivered before 
