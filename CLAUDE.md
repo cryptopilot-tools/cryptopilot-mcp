@@ -79,6 +79,22 @@ proceed without it.
 
 ---
 
+## Agent Behavior
+
+### Final report
+
+At the end of every task or instruction, the agent **must** produce a final 
+report summarizing:
+
+- What was done (actions taken, files modified, commands run)
+- What was found (relevant discoveries or diagnostics)
+- What is pending (next steps or blockers, if any)
+
+The report must be concise, written in plain language, and delivered before 
+the session ends or the task is considered complete.
+
+---
+
 ## Critical Rules
 
 ### Git workflow
@@ -100,6 +116,14 @@ proceed without it.
   names only.
 - API keys should be **read-only** in their issuing platform. The MCP 
   server has no trading code paths.
+- **Never** commit or expose GitHub SSH keys (private or public) in any 
+  file tracked by this repository.
+- **Never** include personal information (real names, surnames, or email 
+  addresses of contributors) in source code, commits, comments, or 
+  documentation. Use role-based identities only (e.g. `team@cryptopilot.tools`).
+- The GitHub account `dennys2280-boop` is **not** associated with this 
+  repository. Do not reference it in commits, PRs, or any project artifact. 
+  If an AI agent or tool injects it as a co-author, remove it before committing.
 - For vulnerability reports, see [SECURITY.md](SECURITY.md).
 
 ### Code style
