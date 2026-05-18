@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "cryptopilot": {
+      "command": "node",
+      "args": ["/Users/dennysguedez/projects/cryptopilot-mcp/dist/server.js"],
+      "env": {
+        "COINBASE_API_KEY_NAME": "REPLACE_ME",
+        "COINBASE_API_PRIVATE_KEY": "REPLACE_ME",
+        "SNAPTRADE_CLIENT_ID": "REPLACE_ME",
+        "SNAPTRADE_CONSUMER_KEY": "REPLACE_ME",
+        "SNAPTRADE_USER_ID": "REPLACE_ME",
+        "SNAPTRADE_USER_SECRET": "REPLACE_ME",
+        "SNAPTRADE_DEFAULT_ACCOUNT_ID": "REPLACE_ME"
+      }
+    }
+  }
+}
