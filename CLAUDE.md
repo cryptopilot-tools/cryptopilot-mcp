@@ -11,8 +11,10 @@ first when starting a session.
 exposes crypto and brokerage portfolio data to Claude Desktop and other 
 MCP-compatible clients.
 
-Sibling project: [stockpilot-mcp](https://github.com/stockpilot-tools/stockpilot-mcp) 
-(stock-only portfolio analytics, separate repo and org).
+**Project boundary:** CryptoPilot is a completely independent project. 
+Agents working in this repository must not reference, compare, or assume 
+any relationship with other projects (including stockpilot-mcp). Each 
+project has its own scope, codebase, and decisions.
 
 ---
 
