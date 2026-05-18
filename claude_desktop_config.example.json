@@ -2,7 +2,7 @@
   "mcpServers": {
     "cryptopilot": {
       "command": "node",
-      "args": ["/Users/dennysguedez/projects/cryptopilot-mcp/dist/server.js"],
+      "args": ["/absolute/path/to/cryptopilot-mcp/dist/server.js"],
       "env": {
         "COINBASE_API_KEY_NAME": "REPLACE_ME",
         "COINBASE_API_PRIVATE_KEY": "REPLACE_ME",
