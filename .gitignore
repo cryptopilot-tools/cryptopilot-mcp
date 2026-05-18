@@ -8,3 +8,6 @@ tmp/
 .DS_Store
 .vscode/
 .idea/
+
+# Local context for AI agents (private, do not commit)
+.local-context.md
